@@ -1,0 +1,22 @@
+const targetWords = [
+  "Briar", "Naafiri", "Milio", "K'Sante", "Nilah", "BelVeth", "Renata Glasc",
+  "Zeri", "Vex", "Akshan", "Gwen", "Viego", "Rell", "Seraphine", "Samira", "Yone",
+  "Lillia", "Sett", "Aphelios", "Senna", "Qiyana", "Yuumi", "Sylas", "Neeko", "Pyke",
+  "KaiSa", "Zoe", "Ornn", "Kayn", "Rakan", "Xayah", "Camille", "Ivern", "Kled",
+  "Taliyah", "Aurelion Sol", "Jhin", "Illaoi", "Kindred", "Tahm Kench", "Ekko", "Bard",
+  "RekSai", "Kalista", "Azir", "Gnar", "Braum", "VelKoz", "Yasuo", "Jinx", "Lucian",
+  "Aatrox", "Lissandra", "Zac", "Quinn", "Thresh", "Vi", "Nami", "Zed", "Elise",
+  "KhaZix", "Syndra", "Rengar", "Diana", "Zyra", "Jayce", "Draven", "Darius", "Varus",
+  "Hecarim", "Lulu", "Fiora", "Nautilus", "Ziggs", "Sejuani", "Viktor", "Ahri", "Volibear",
+  "Fizz", "Graves", "Xerath", "Riven", "Talon", "Skarner", "Wukong", "Leona", "Yorick",
+  "Orianna", "Vayne", "Rumble", "Brand", "Lee Sin", "Nocturne", "Jarvan IV", "Maokai",
+  "Karma", "Renekton", "Shyvana", "Caitlyn", "Cassiopeia", "Trundle", "Irelia", "LeBlanc",
+  "Lux", "Swain", "Sona", "Miss Fortune", "Urgot", "Galio", "Vladimir", "Xin Zhao",
+  "KogMaw", "Olaf", "Malzahar", "Akali", "Garen", "Kennen", "Shen", "Ezreal", "Mordekaiser",
+  "Gragas", "Pantheon", "Poppy", "Nidalee", "Udyr", "Heimerdinger", "Shaco", "Nasus",
+  "Corki", "Katarina", "Blitzcrank", "Dr. Mundo", "Janna", "Malphite", "Gangplank", "Taric",
+  "Kassadin", "Veigar", "Anivia", "Rammus", "Amumu", "ChoGath", "Karthus", "Evelynn",
+  "Tryndamere", "Twitch", "Singed", "Zilean", "Alistar", "Annie", "Ashe", "Fiddlesticks",
+  "Jax", "Kayle", "Master Yi", "Morgana", "Nunu & Willump", "Ryze", "Sion", "Sivir",
+  "Soraka", "Teemo", "Tristana", "Twisted Fate", "Warwick"
+];
