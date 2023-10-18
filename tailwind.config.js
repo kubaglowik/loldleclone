@@ -3,11 +3,10 @@ module.exports = {
   content: [],
   theme: {
     extend: {
-      fontFamily:{
-        Roboto:['Roboto']
-      }
+      backgroundImage: {
+        'background-my-image': 'url("../public/tlo.jpg")',
+      },
     },
   },
   plugins: [],
 }
-
