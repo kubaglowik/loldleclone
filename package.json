@@ -1,15 +1,23 @@
 {
-  "name": "lolv2",
+  "name": "poradniktw",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+    "build-css": "tailwindcss build src/styles.css -o public/styles. "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubaglowik/twex2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/kubaglowik/twex2/issues"
+  },
+  "homepage": "https://github.com/kubaglowik/twex2#readme",
+  "devDependencies": {
     "tailwindcss": "^3.3.3"
   }
 }
