@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="../public/img/bg.png" />
+    <title>Loldlev2</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>Yummy!</title>
   </head>
   <body>
-    <div class="text-red-700"> fdsfds</div>
-    <script type="text/javascript" src="../public/cript.js"></script>
+    <div class="max-w-md mx-auto bg-white p-10 mt-10 rounded-md shadow-2xl ">
+      <h1 class="flex justify-center first-letter:text-2xl font-semibold mb-4">
+        Loldlev2
+      </h1>
+      <div class="flex justify-center mb-4">
+        <input
+          type="text"
+          id="wordInput"
+          class="w-1/2 px-2 py-1 border rounded-md"
+          placeholder="Wprowadź słowo"
+        />
+        <button
+          id="submitWord"
+          class="ml-2 px-4 py-1 bg-blue-500 text-white rounded-md"
+        >
+          check
+        </button>
+      </div>
+      <div id="attempts" class=" flex justify-center flex-col items-center mb-4 text-3xl">
+        <!-- Wyniki zostaną wyświetlone tutaj -->
+      </div>
+      <div id="results" class="mb-4">
+        <!-- Miejsce na wyświetlenie wyników -->
+      </div>
+      <div class="mb-4" id="submitHint"></div>
+      <div id="hints" class="mb-4">
+        <!-- Okienko z podpowiedziami -->
+      </div>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
