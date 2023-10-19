@@ -1,0 +1,16 @@
+const targetWords = [
+  // Lista słów dla kategorii "Kobiety"
+  "Briar", "Naafiri", "Nilah", "BelVeth", "Renata Glasc", "Zeri", "Vex", "Gwen", "Rell", "Seraphine", "Samira", "Lillia", "Senna", "Qiyana", "Yuumi",
+  "KaiSa", "Zoe", "Xayah", "Camille", "Taliyah", "Illaoi", "Kindred", "RekSai", "Kalista", "Jinx", "Lissandra", "Quinn",  "Vi", "Nami", "Elise",
+  "Syndra", "Zyra", "Lulu", "Fiora", "Sejuani", "Ahri", "Riven", "Leona", "Orianna", "Vayne", "Karma", "Shyvana", "Caitlyn", "Cassiopeia", "Irelia",
+  "LeBlanc", "Lux", "Sona", "Miss Fortune", "Akali", "Poppy", "Nidalee", "Katarina", "Janna", "Anivia", "Evelynn", "Annie", "Ashe", "Kayle", "Morgana",
+  "Soraka", "Tristana", "Sivir",
+
+  // Lista słów dla kategorii "Mężczyźni"
+  "Akshan", "Viego", "Yone", "Sett", "Aphelios", "Sylas", "Neeko", "Pyke",
+  "Ornn", "Kayn", "Rakan", "Draven", "Darius", "Varus", "Hecarim", "Kassadin",
+  "Veigar", "Amumu", "Cho'Gath", "Karthus", "Tryndamere", "Twitch", "Singed",
+  "Zilean", "Alistar", "Jax", "Master Yi", "Teemo", "Warwick"
+  // Lista słów, których kategoria jest "Niewiadomo"
+  // Tutaj możesz dodać resztę słów
+];
