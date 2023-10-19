@@ -1,44 +1,49 @@
 
-  const targetWords = [
-    "Briar", "Naafiri", "Milio", "K'Sante", "Nilah", "BelVeth", "Renata Glasc",
-    "Zeri", "Vex", "Akshan", "Gwen", "Viego", "Rell", "Seraphine", "Samira", "Yone",
-    "Lillia", "Sett", "Aphelios", "Senna", "Qiyana", "Yuumi", "Sylas", "Neeko", "Pyke",
-    "KaiSa", "Zoe", "Ornn", "Kayn", "Rakan", "Xayah", "Camille", "Ivern", "Kled",
-    "Taliyah", "Aurelion Sol", "Jhin", "Illaoi", "Kindred", "Tahm Kench", "Ekko", "Bard",
-    "RekSai", "Kalista", "Azir", "Gnar", "Braum", "VelKoz", "Yasuo", "Jinx", "Lucian",
-    "Aatrox", "Lissandra", "Zac", "Quinn", "Thresh", "Vi", "Nami", "Zed", "Elise",
-    "KhaZix", "Syndra", "Rengar", "Diana", "Zyra", "Jayce", "Draven", "Darius", "Varus",
-    "Hecarim", "Lulu", "Fiora", "Nautilus", "Ziggs", "Sejuani", "Viktor", "Ahri", "Volibear",
-    "Fizz", "Graves", "Xerath", "Riven", "Talon", "Skarner", "Wukong", "Leona", "Yorick",
-    "Orianna", "Vayne", "Rumble", "Brand", "Lee Sin", "Nocturne", "Jarvan IV", "Maokai",
-    "Karma", "Renekton", "Shyvana", "Caitlyn", "Cassiopeia", "Trundle", "Irelia", "LeBlanc",
-    "Lux", "Swain", "Sona", "Miss Fortune", "Urgot", "Galio", "Vladimir", "Xin Zhao",
-    "KogMaw", "Olaf", "Malzahar", "Akali", "Garen", "Kennen", "Shen", "Ezreal", "Mordekaiser",
-    "Gragas", "Pantheon", "Poppy", "Nidalee", "Udyr", "Heimerdinger", "Shaco", "Nasus",
-    "Corki", "Katarina", "Blitzcrank", "Dr. Mundo", "Janna", "Malphite", "Gangplank", "Taric",
-    "Kassadin", "Veigar", "Anivia", "Rammus", "Amumu", "ChoGath", "Karthus", "Evelynn",
-    "Tryndamere", "Twitch", "Singed", "Zilean", "Alistar", "Annie", "Ashe", "Fiddlesticks",
-    "Jax", "Kayle", "Master Yi", "Morgana", "Nunu & Willump", "Ryze", "Sion", "Sivir",
-    "Soraka", "Teemo", "Tristana", "Twisted Fate", "Warwick"
-  ];
+const targetWords = [
+  // Lista słów dla kategorii "Kobiety"
+  "Briar", "Naafiri", "Nilah", "BelVeth", "Renata Glasc", "Zeri", "Vex", "Gwen", "Rell", "Seraphine", "Samira", "Lillia", "Senna", "Qiyana", "Yuumi",
+  "KaiSa", "Zoe", "Xayah", "Camille", "Taliyah", "Illaoi", "Kindred", "RekSai", "Kalista", "Jinx", "Lissandra", "Quinn",  "Vi", "Nami", "Elise",
+  "Syndra", "Zyra", "Lulu", "Fiora", "Sejuani", "Ahri", "Riven", "Leona", "Orianna", "Vayne", "Karma", "Shyvana", "Caitlyn", "Cassiopeia", "Irelia",
+  "LeBlanc", "Lux", "Sona", "Miss Fortune", "Akali", "Poppy", "Nidalee", "Katarina", "Janna", "Anivia", "Evelynn", "Annie", "Ashe", "Kayle", "Morgana",
+  "Soraka", "Tristana", "Sivir", "Neeko",
 
-const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)].toLowerCase();
+  // Lista słów dla kategorii "Mężczyźni"
+  "Milio", "K'Sante","Akshan","Viego","Yone","Sett", "Aphelios", "Sylas", "Pyke","Ornn", "Kayn", "Rakan", "Ivern", "Kled","Aurelion Sol", "Jhin",
+  "Tahm Kench", "Ekko", "Bard","Azir", "Gnar", "Braum", "VelKoz", "Yasuo", "Lucian","Aatrox","Zac", "Thresh", "Zed","KhaZix", "Rengar", "Jayce",
+  "Draven", "Darius", "Varus","Hecarim", "Nautilus", "Ziggs", "Viktor", "Volibear","Fizz", "Graves", "Xerath", "Talon", "Skarner", "Wukong", "Yorick",
+  "Rumble", "Brand", "Lee Sin", "Nocturne", "Jarvan IV", "Maokai","Renekton", "Trundle","Swain", "Urgot", "Galio", "Vladimir", "Xin Zhao","KogMaw",
+  "Olaf", "Malzahar", "Garen", "Kennen", "Shen", "Ezreal", "Mordekaiser","Gragas", "Pantheon", "Udyr", "Heimerdinger", "Shaco", "Nasus","Corki",
+  "Blitzcrank", "Dr. Mundo", "Malphite", "Gangplank", "Taric","Kassadin", "Veigar",  "Rammus", "Amumu", "ChoGath", "Karthus","Tryndamere", "Twitch",
+   "Singed", "Zilean", "Alistar", "Fiddlesticks","Jax", "Master Yi", "Nunu & Willump", "Ryze", "Sion","Teemo", "Twisted Fate", "Warwick"
+
+];
+
+
+const randomIndex = Math.floor(Math.random() * targetWords.length);
+const targetWord = targetWords[randomIndex].toLowerCase();
+
+
+if (randomIndex < 60) {
+  wordCategory = "Kobieta";
+} else if (randomIndex < 160) {
+  wordCategory = "Mężczyzna";
+}
 
 const hints = [
-  "To słowo ma " + targetWord.length + " liter",
-  "Pierwsza litera to " + targetWord[0] + "."
+  "To słowo ma " + targetWord.length + " litery",
+  "Pierwsza litera to " + targetWord[0] + ".",
+  "Płeć: " + wordCategory
 ];
 
 const submitButton = document.getElementById("submitWord");
 const wordInput = document.getElementById("wordInput");
 const attemptsContainer = document.getElementById("attempts");
 const resultsContainer = document.getElementById("results");
-const hintInput = document.getElementById("hintInput");
 const submitHintButton = document.getElementById("submitHint");
 const hintsContainer = document.getElementById("hints");
 
 let attempts = 0;
-const maxAttempts = 5;
+const maxAttempts = 8;
 
 submitButton.addEventListener("click", () => {
   const guessedWord = wordInput.value.toLowerCase();
@@ -49,17 +54,17 @@ submitButton.addEventListener("click", () => {
   }
 
   attempts++;
-
+  
   const result = checkWord(guessedWord);
 
   if (result.isCorrect || attempts >= maxAttempts) {
     submitButton.disabled = true;
     if (result.isCorrect) {
-      attemptsContainer.innerHTML = `<p class="text-green-500">Gratulacje! Słowo odgadnięte w ${attempts} próbach.</p>`;
+      attemptsContainer.innerHTML = `<p class="text-green-500 font-semibold">Gratulacje! Słowo odgadnięte w ${attempts} próbach.</p>`;
       resultsContainer.innerHTML = `<p class="text-green-500">Wynik: ${guessedWord}</p>`;
     } else {
-      attemptsContainer.innerHTML = `<p class="text-red-500">Koniec gry. Nie udało się odgadnąć słowa. Poprawne słowo to: ${targetWord}</p>`;
-      resultsContainer.innerHTML = `<p class="text-red-500">Przekroczono maksymalną liczbę prób.</p>`;
+      attemptsContainer.innerHTML = `<p class="text-red-500 font-semibold flex justify-center">Koniec gry. Nie udało się odgadnąć słowa. Poprawne słowo to: ${targetWord}</p>`;
+      resultsContainer.innerHTML = `<p class="text-red-500 font-semibold flex justify-center">Przekroczono maksymalną liczbę prób.</p>`;
     }
   } else {
     const attemptMessage = result.matchedLetters === targetWord.length
@@ -68,6 +73,7 @@ submitButton.addEventListener("click", () => {
 
     attemptsContainer.innerHTML += `<div class="mb-2">${attemptMessage}</div>`;
   }
+  wordInput.value = "";
 });
 
 wordInput.addEventListener("keyup", (event) => {
@@ -76,19 +82,11 @@ wordInput.addEventListener("keyup", (event) => {
   }
 });
 
-submitHintButton.addEventListener("click", () => {
-  const hint = hintInput.value;
-  if (hint) {
-    hints.push(hint);
-    hintInput.value = "";
-    displayHints();
-  }
-});
 
 function displayHints() {
-  hintsContainer.innerHTML = "<p class='text-blue-500'>Podpowiedzi:</p>";
+  hintsContainer.innerHTML = "<p class='text-blue-800'>Podpowiedzi:</p>";
   hints.forEach(hint => {
-    hintsContainer.innerHTML += `<p class="text-blue-500">${hint}</p>`;
+    hintsContainer.innerHTML += `<p class="text-blue-800">${hint}</p>`;
   });
 }
 
