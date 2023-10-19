@@ -8,13 +8,13 @@ const targetWords = [
   "Soraka", "Tristana", "Sivir", "Neeko",
 
   // Lista słów dla kategorii "Mężczyźni"
-  "Milio", "K'Sante","Akshan","Viego","Yone","Sett", "Aphelios", "Sylas", "Pyke","Ornn", "Kayn", "Rakan", "Ivern", "Kled","Aurelion Sol", "Jhin",
+  "Milio", "KSante","Akshan","Viego","Yone","Sett", "Aphelios", "Sylas", "Pyke","Ornn", "Kayn", "Rakan", "Ivern", "Kled","Aurelion Sol", "Jhin",
   "Tahm Kench", "Ekko", "Bard","Azir", "Gnar", "Braum", "VelKoz", "Yasuo", "Lucian","Aatrox","Zac", "Thresh", "Zed","KhaZix", "Rengar", "Jayce",
   "Draven", "Darius", "Varus","Hecarim", "Nautilus", "Ziggs", "Viktor", "Volibear","Fizz", "Graves", "Xerath", "Talon", "Skarner", "Wukong", "Yorick",
   "Rumble", "Brand", "Lee Sin", "Nocturne", "Jarvan IV", "Maokai","Renekton", "Trundle","Swain", "Urgot", "Galio", "Vladimir", "Xin Zhao","KogMaw",
   "Olaf", "Malzahar", "Garen", "Kennen", "Shen", "Ezreal", "Mordekaiser","Gragas", "Pantheon", "Udyr", "Heimerdinger", "Shaco", "Nasus","Corki",
-  "Blitzcrank", "Dr. Mundo", "Malphite", "Gangplank", "Taric","Kassadin", "Veigar",  "Rammus", "Amumu", "ChoGath", "Karthus","Tryndamere", "Twitch",
-   "Singed", "Zilean", "Alistar", "Fiddlesticks","Jax", "Master Yi", "Nunu & Willump", "Ryze", "Sion","Teemo", "Twisted Fate", "Warwick"
+  "Blitzcrank", "Dr.Mundo", "Malphite", "Gangplank", "Taric","Kassadin", "Veigar",  "Rammus", "Amumu", "ChoGath", "Karthus","Tryndamere", "Twitch",
+   "Singed", "Zilean", "Alistar", "Fiddlesticks","Jax", "Master Yi", "Nunu & Willump", "Ryze", "Sion","Teemo", "Twisted Fate", "Warwick", "abcdefghijklmnoprstuwxyz"
 
 ];
 
@@ -22,17 +22,16 @@ const targetWords = [
 const randomIndex = Math.floor(Math.random() * targetWords.length);
 const targetWord = targetWords[randomIndex].toLowerCase();
 
-
-if (randomIndex < 60) {
+if (randomIndex < 63) {
   wordCategory = "Kobieta";
-} else if (randomIndex < 160) {
+} else if (randomIndex < 162) {
   wordCategory = "Mężczyzna";
 }
 
 const hints = [
   "To słowo ma " + targetWord.length + " liter",
   "Pierwsza litera to " + "'" + targetWord[0] + "'",
-  "Płeć: " + wordCategory
+  "Płeć: " + wordCategory,
 ];
 
 const submitButton = document.getElementById("submitWord");
@@ -54,7 +53,7 @@ submitButton.addEventListener("click", () => {
   }
 
   attempts++;
-  
+
   const result = checkWord(guessedWord);
 
   if (result.isCorrect || attempts >= maxAttempts) {
@@ -67,9 +66,10 @@ submitButton.addEventListener("click", () => {
       resultsContainer.innerHTML = `<p class="text-red-500 font-semibold flex justify-center">Przekroczono maksymalną liczbę prób.</p>`;
     }
   } else {
-    const attemptMessage = result.matchedLetters === targetWord.length
-      ? `Gratulacje! Słowo jest poprawne, ale w złej kolejności.`
-      : ` ${attempts}: ${generateAttemptFeedback(guessedWord, targetWord)}`;
+    const attemptMessage =
+      result.matchedLetters === targetWord.length
+        ? `Gratulacje! Słowo jest poprawne, ale w złej kolejności.`
+        : ` ${attempts}: ${generateAttemptFeedback(guessedWord, targetWord)}`;
 
     attemptsContainer.innerHTML += `<div class="mb-2">${attemptMessage}</div>`;
   }
@@ -82,10 +82,9 @@ wordInput.addEventListener("keyup", (event) => {
   }
 });
 
-
 function displayHints() {
   hintsContainer.innerHTML = "<p class='text-blue-800'>Podpowiedzi:</p>";
-  hints.forEach(hint => {
+  hints.forEach((hint) => {
     hintsContainer.innerHTML += `<p class="text-blue-800">${hint}</p>`;
   });
 }
@@ -105,7 +104,7 @@ function checkWord(guessedWord) {
 }
 
 function generateAttemptFeedback(guessedWord, targetWord) {
-  let feedback = '';
+  let feedback = "";
 
   for (let i = 0; i < targetWord.length; i++) {
     if (guessedWord[i] === targetWord[i]) {
@@ -117,5 +116,5 @@ function generateAttemptFeedback(guessedWord, targetWord) {
     }
   }
 
-  return feedback;  
+  return feedback;
 }
