@@ -31,7 +31,7 @@ if (randomIndex < 60) {
 
 const hints = [
   "To słowo ma " + targetWord.length + " liter",
-  "Pierwsza litera to " + targetWord[0],
+  "Pierwsza litera to " + "'" + targetWord[0] + "'",
   "Płeć: " + wordCategory
 ];
 
